@@ -17,7 +17,7 @@ Usei o Pygame pra abrir a janela e o PyOpenGL pra renderizar o 3D. A física é 
 - **Colisões**: Elas batem nas paredes do cubo e umas nas outras com colisões elásticas, calculadas em 3D.
 - O cubo é desenhado só com linhas brancas pra não atrapalhar a visão das partículas.
 
-O código tá em `simulacao_3d.py`, com uma classe `Particle` pra cada partícula e funções pra colisões e pro cubo.
+O código tá em `particulas.py`, com uma classe `Particle` pra cada partícula e funções pra colisões e pro cubo.
 
 ## Como rodar
 É fácil, mas precisa instalar umas coisas:
