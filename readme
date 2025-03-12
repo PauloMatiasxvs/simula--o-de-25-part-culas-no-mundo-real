@@ -1,0 +1,65 @@
+# Simulação de 25 Partículas em um Cubo 3D
+
+Oi! Esse é o meu projeto de simulação de 25 partículas dentro de um cubo 3D. Fiz tudo em Python usando PyOpenGL e Pygame, e tô bem orgulhoso de como ficou! Aqui as partículas se movem, caem com gravidade, colidem entre si e com as paredes do cubo, e ainda têm cores diferentes pra ficar mais bonito.
+
+## O que tá rolando?
+Eu criei uma simulação onde:
+- 25 partículas (esferas pequenas) começam em posições aleatórias dentro de um cubo 10x10x10.
+- Elas têm velocidades iniciais aleatórias e caem por causa da gravidade, como num ambiente real.
+- Adicionei um pouco de fricção pra elas desacelerarem com o tempo.
+- Cada partícula tem uma cor única, o que deixa a visualização bem mais interessante.
+- Tudo roda em 3D, com um cubo que gira devagar pra você poder ver de todos os ângulos.
+
+## Como funciona?
+Usei o Pygame pra abrir a janela e o PyOpenGL pra renderizar o 3D. A física é simples, mas realista:
+- **Gravidade**: As partículas caem (vy diminui todo frame).
+- **Fricção**: Reduz a velocidade um pouco a cada atualização.
+- **Colisões**: Elas batem nas paredes do cubo e umas nas outras com colisões elásticas, calculadas em 3D.
+- O cubo é desenhado só com linhas brancas pra não atrapalhar a visão das partículas.
+
+O código tá em `simulacao_3d.py`, com uma classe `Particle` pra cada partícula e funções pra colisões e pro cubo.
+
+## Como rodar
+É fácil, mas precisa instalar umas coisas:
+1. Tenha Python instalado (qualquer versão recente funciona).
+2. Instale as bibliotecas:
+pip install pygame PyOpenGL PyOpenGL_accelerate
+
+text
+
+Recolher
+
+Encapsular
+
+Copiar
+3. Baixe o arquivo `simulacao_3d.py` desse repositório.
+4. Rode no terminal:
+python simulacao_3d.py
+
+text
+
+Recolher
+
+Encapsular
+
+Copiar
+5. Uma janela vai abrir e você vai ver as partículas caindo e colidindo dentro do cubo!
+
+## Detalhes técnicos
+- **Cubo**: Vai de -5 a 5 em x, y e z (tamanho 10 unidades).
+- **Partículas**: Esferas de raio 0.2, com massa 1.
+- **Gravidade**: 0.005 unidades por frame pra baixo.
+- **Fricção**: Velocidade reduzida em 1% por frame (0.99).
+- **Cores**: Cada partícula tem um RGB aleatório.
+
+Deixei o código comentado pra quem quiser entender melhor. Dá uma olhada se tiver curiosidade!
+
+## Ideias pra melhorar
+Fiz essa versão já com bastante coisa, mas dá pra incrementar:
+- Adicionar controles pra mexer na câmera com o mouse.
+- Colocar uma força de vento ou algo assim pra mexer mais as partículas.
+- Talvez aumentar o número de partículas (mas aí pode ficar lento).
+- Quem sabe adicionar som pras colisões? Seria legal!
+
+## Por que fiz isso?
+Sempre quis brincar com simulações 3D e entender como funciona a física em três dimensõe
